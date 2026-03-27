@@ -6,6 +6,7 @@ const dns = require('dns');
 const { ERROR } = require('./utils/httpStatusText.js');
 const path = require('path');
 dns.setServers(["1.1.1.1", "1.0.0.1", "8.8.8.8"]);
+const cors = require("cors");
 const app = express()
 
 app.use('/uploads',express.static(path.join(__dirname, 'uploads')))
