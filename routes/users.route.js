@@ -33,7 +33,7 @@ const upload = multer({ storage: diskStorage, fileFilter})
 router.route('/')
     .get(verifyToken, allUser)
 router.route('/logIn')
-    .get(logIn)
+    .post(logIn)
 router.route('/regester')
     .post(upload.single('avatar'), regester)
 
