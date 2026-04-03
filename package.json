@@ -1,4 +1,12 @@
 {
+  "name": "teacher-backend",
+  "version": "1.0.0",
+  "description": "Backend for Teacher app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
@@ -8,7 +16,6 @@
     "mongoose": "^9.3.2",
     "multer": "^2.1.1"
   },
-  "scripts": {
-    "dev": "nodemon index.js"
-  }
+  "author": "Mohamed Yasser",
+  "license": "ISC"
 }

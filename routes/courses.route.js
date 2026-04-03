@@ -5,11 +5,11 @@ const allowedTo = require('../middleware/allowedTo.js');
 const verifyToken = require('../middleware/verifyToken.js');
 const router = express.Router();
 router.route('/')
-    .get(getCourse)
-    .post(postCourse)
+    .get(verifyToken, getCourse)
+    .post(verifyToken, postCourse)
 router.route('/:id')
-    .get(getSengleCourse)
-    .patch(updateCourse)
+    .get(verifyToken, getSengleCourse)
+    .patch(verifyToken, updateCourse)
     .delete(verifyToken,allowedTo(userRole.ADMIN), deleteCourse)
 router
 
